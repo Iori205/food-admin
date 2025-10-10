@@ -20,6 +20,7 @@ export default function Card() {
     const filepev = URL.createObjectURL(file);
     setPev(filepev);
   };
+
   return (
     <div className="w-[239px] h-[225px] border-2 border-red-500 border-dashed rounded-2xl">
       <div className="p-[58.38px] text-center">

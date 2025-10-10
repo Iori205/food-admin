@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import { Header } from "@/app/_components/Header";
 import { Sidebar } from "./Sidebar";
+import { CreateFoodDialog } from "./Menu-Section";
+import { FoodList } from "./Foodlist";
 
 //wrapper component
 export const AdminLayout = ({
@@ -10,12 +12,13 @@ export const AdminLayout = ({
   children: ReactNode;
   className?: string;
 }) => {
-  const customStyle = className + " w-full";
+  const customStyle = className + " w-full h-screen";
   return (
-    <div className="flex">
+    <div className="flex gap-6 bg-secondary">
       <Sidebar />
       <div className={customStyle}>
         <Header />
+
         {children}
       </div>
     </div>
