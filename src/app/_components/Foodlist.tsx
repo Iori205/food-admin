@@ -1,8 +1,25 @@
-"use client";
 import { Pencil } from "lucide-react";
 import React from "react";
+import { useState, useEffect } from "react";
+type Food = {
+  name: string;
+  ingredients: string;
+  price: number;
+  categoryId: string;
+  imageUrl: string;
+};
 
 export const FoodList = () => {
+  const [foods, setFoods] = useState<Food[]>([]);
+
+  useEffect(() => {
+    const getFoods = async () => {
+      const res = await fetch("http://localhost:4000/api/food");
+      const data = await res.json();
+      setFoods(data.data);
+    };
+    getFoods();
+  }, []);
   return (
     <div
       className="w-[270px] h-[241px]  rounded-[20px]  flex-col  flex   border-1 border-border items-center p-4 justify-between

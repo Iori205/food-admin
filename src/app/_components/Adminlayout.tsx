@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Header } from "@/app/_components/Header";
 import { Sidebar } from "./Sidebar";
-import { CreateFoodDialog } from "./Menu-Section";
+import { CreateFoodDialog } from "./Fooddialog";
 import { FoodList } from "./Foodlist";
 
 //wrapper component
